@@ -17,3 +17,9 @@ If task is due in future then it will show as white
 ## Deletion of Task
 Once the task is deleted it will be deleted from storage and will not show up in the local storage or browser display
 
+# Functions
+### ''
+
+
+## Screenshot
+![Payroll Tracker](./assets/images/Array%20Display.png)
