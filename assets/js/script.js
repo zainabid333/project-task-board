@@ -39,7 +39,6 @@ function createTaskCard(task) {
 
 // Function to render the task list and make cards draggable
 function renderTaskList() {
-    console.log("Rendering tasks:", taskList);
     $("#todo-cards, #in-progress-cards, #done-cards").empty();
     taskList.forEach(task => {
         const taskCard = createTaskCard(task);
