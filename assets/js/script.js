@@ -14,11 +14,15 @@ function createTaskCard(task) {
     const taskCard = $('<div>')
         .addClass('card task-card mb-3')
         .attr('data-id', task.id);
-
-    if (dueDate.isBefore(dayjs(), 'day')) {
-        taskCard.addClass('bg-danger text-white');
-    } else if (dueDate.isBefore(dayjs().add(3, 'day'), 'day')) {
-        taskCard.addClass('bg-warning');
+    if (task.status !== 'done') {
+        if (dueDate.isSame(dayjs(), 'day')) {
+            taskCard.addClass('bg-warning');
+        } else if (dueDate.isBefore(dayjs(), 'day')) {
+            taskCard.addClass('bg-danger text-white');
+        }
+    }
+    else {
+        taskCard.removeClass('bg-warning bg-danger text-white');
     }
 
     const cardBody = $('<div>').addClass('card-body');
