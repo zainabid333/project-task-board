@@ -26,3 +26,11 @@ body {
 .bg-warning {
   background-color: #fff3cd !important;
 }
+
+.card-header {
+  display: block !important;
+}
+.card-title {
+  margin: 0;
+  padding: 10px 0;
+}
